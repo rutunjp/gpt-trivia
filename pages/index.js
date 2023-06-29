@@ -6,7 +6,6 @@ import {
   Input,
   Select,
 } from '@chakra-ui/react'
-
 export default function Home() {
   return (
     <VStack maxW={'30%'} m={'auto'}>
@@ -29,7 +28,15 @@ export default function Home() {
         <option value="random">Random</option>
       </Select>
       <Input placeholder="Instructions" />
-      <Button colorScheme="blue">Create Quiz</Button>
+      <Button
+        colorScheme="blue"
+        onClick={(e) => {
+          e.preventDefault()
+          console.log('fires')
+        }}
+      >
+        Create Quiz
+      </Button>
     </VStack>
   )
 }
